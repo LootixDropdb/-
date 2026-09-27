@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Metro Pass | MetroDrop</title>
+	<link rel="stylesheet" href="style.css?v=20260927-pass-mobile-offset">
+	<link rel="preload" as="image" href="img/pass_bg.jpg">
+	<script src="supabase.js"></script>
+	<script src="script.js?v=20260927-pass-mobile-offset" defer></script>
+</head>
+	<body class="missions-body pass-body">
+	<div class="background-overlay" aria-hidden="true"></div>
+
+	<header class="site-header">
+		<a class="brand" href="home.html" aria-label="MetroDrop - главная">
+			<img class="brand-logo" src="img/logo.png" alt="MetroDrop">
+		</a>
+
+		<nav class="main-nav" id="main-menu" aria-label="Основная навигация">
+			<a class="nav-link" href="home.html#login">АВТОРИЗАЦИЯ</a>
+			<a class="nav-link" href="home.html#cases">КЕЙСЫ</a>
+			<a class="nav-link" href="home.html#market">РЫНОК</a>
+			<a class="nav-link" href="workbench.html">ВЕРСТАК</a>
+			<a class="nav-link" href="contract.html">КОНТРАКТ</a>
+			<a class="nav-link is-active" href="pass.html">METRO PASS</a>
+
+			<div class="mobile-menu-panel" aria-label="Меню пользователя">
+				<a class="mobile-menu-item" href="home.html#login">АВТОРИЗАЦИЯ</a>
+				<a class="mobile-menu-item" href="home.html#cases">КЕЙСЫ</a>
+				<a class="mobile-menu-item" href="workbench.html">ВЕРСТАК</a>
+				<a class="mobile-menu-item" href="upgrade.html">АПГРЕЙД</a>
+				<a class="mobile-menu-item" href="contract.html">КОНТРАКТ</a>
+				<a class="mobile-menu-item gold-menu-item" href="pass.html">METRO PASS</a>
+				<img class="mobile-menu-decoration" src="img/img_menu.png" alt="" aria-hidden="true">
+			</div>
+		</nav>
+
+		<div class="header-actions">
+			<a class="login-button" href="home.html#login">ВОЙТИ</a>
+			<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+				<span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+				<span class="visually-hidden">Открыть меню</span>
+			</button>
+		</div>
+	</header>
+
+	<main class="missions-page pass-page">
+		<div class="pass-view" id="passRewardsView">
+		<section class="pass-hero" aria-label="Metro Pass banners">
+			<div class="pass-tier-grid">
+				<img class="pass-tier-image" src="img/1790455712088.png" alt="FREE PASS Metro Pass">
+				<img class="pass-tier-image" src="img/1790455766969.png" alt="PLUS PASS Metro Pass">
+			</div>
+		</section>
+		<section class="pass-progress" aria-label="Прогресс Metro Pass">
+			<div class="pass-progress-level">
+				<span>УРОВЕНЬ</span>
+				<strong id="passProgressLevel">1</strong>
+			</div>
+			<div class="pass-progress-meter">
+				<div class="pass-progress-label" id="passProgressLabel">0 / 1000 XP</div>
+				<div class="pass-progress-track" id="passProgressTrack" role="progressbar" aria-label="Опыт Metro Pass" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0">
+					<span id="passProgressFill"></span>
+				</div>
+			</div>
+			<button class="pass-tasks-button" id="openPassTasks" type="button">ЗАДАНИЯ</button>
+		</section>
+		<section class="pass-tier-rewards-grid" aria-label="Награды Metro Pass">
+			<div class="pass-reward-rows" id="passRewardRows"></div>
+		</section>
+		</div>
+		<section class="pass-tasks-view" id="passTasksView" hidden>
+			<header class="pass-tasks-heading">
+				<div>
+					<h1>ЗАДАНИЕ</h1>
+				</div>
+				<button class="pass-tasks-button" id="backToPass" type="button">ВЕРНУТЬСЯ</button>
+			</header>
+			<p class="pass-tasks-login" id="passTasksLoginNotice" hidden>Войдите в аккаунт, чтобы выполнять задания.</p>
+			<section class="pass-tasks-list" id="passTasksList" aria-label="Задания Metro Pass"></section>
+			<p class="pass-tasks-empty" id="passTasksEmpty" hidden>Активных заданий пока нет.</p>
+		</section>
+
+	</main>
+</body>
+</html>
